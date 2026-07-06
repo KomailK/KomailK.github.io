@@ -15,12 +15,10 @@ const NAV_LINKS = [
 ]
 
 function Navbar({ theme, toggleTheme }) {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('about')
-
-  const toggleLang = () => i18n.changeLanguage(i18n.language === 'fr' ? 'en' : 'fr')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -79,13 +77,6 @@ function Navbar({ theme, toggleTheme }) {
           </button>
 
           <button
-            onClick={toggleLang}
-            className="hidden lg:inline-flex items-center rounded-full border border-border px-3 py-1 text-xs font-semibold text-navy hover:bg-bg-secondary transition-colors"
-          >
-            {i18n.language === 'fr' ? 'EN' : 'FR'}
-          </button>
-
-          <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="lg:hidden text-2xl text-navy"
             aria-label="Menu"
@@ -107,21 +98,13 @@ function Navbar({ theme, toggleTheme }) {
               {t(`nav.${link.key}`)}
             </a>
           ))}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={toggleTheme}
-              className="inline-flex items-center rounded-full border border-border px-4 py-2 text-sm font-semibold text-navy"
-              aria-label="Toggle theme"
-            >
-              {theme === 'light' ? <FaMoon /> : <FaSun />}
-            </button>
-            <button
-              onClick={toggleLang}
-              className="rounded-full border border-border px-4 py-2 text-sm font-semibold text-navy"
-            >
-              {i18n.language === 'fr' ? 'EN' : 'FR'}
-            </button>
-          </div>
+          <button
+            onClick={toggleTheme}
+            className="inline-flex items-center rounded-full border border-border px-4 py-2 text-sm font-semibold text-navy"
+            aria-label="Toggle theme"
+          >
+            {theme === 'light' ? <FaMoon /> : <FaSun />}
+          </button>
         </div>
       )}
     </header>

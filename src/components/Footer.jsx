@@ -7,8 +7,7 @@ const SOCIALS = [
 ]
 
 function Footer() {
-  const { t, i18n } = useTranslation()
-  const toggleLang = () => i18n.changeLanguage(i18n.language === 'fr' ? 'en' : 'fr')
+  const { t } = useTranslation()
 
   return (
     <footer className="py-6 bg-bg-primary border-t border-border px-6">
@@ -27,12 +26,6 @@ function Footer() {
               <s.icon />
             </a>
           ))}
-          <button
-            onClick={toggleLang}
-            className="rounded-full border border-border px-3 py-1 text-xs font-semibold text-navy hover:bg-bg-secondary transition-colors"
-          >
-            {i18n.language === 'fr' ? 'EN' : 'FR'}
-          </button>
         </div>
       </div>
     </footer>

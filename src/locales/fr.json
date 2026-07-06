@@ -7,6 +7,7 @@
     "platforms": "Plateformes",
     "certifications": "Certifications",
     "softSkills": "Soft Skills",
+    "interests": "Centres d'intérêt",
     "contact": "Contact"
   },
   "hero": {
@@ -29,9 +30,7 @@
     "skills": ["SOC", "SIEM", "EDR", "Pentest", "Python", "Kali Linux", "Blue Team", "Red Team", "IAM", "Cloud Security"]
   },
   "experience": {
-    "title": "Expériences",
-    "seeMore": "Voir plus",
-    "seeLess": "Voir moins"
+    "title": "Expériences"
   },
   "projects": {
     "title": "Projets",
@@ -59,7 +58,10 @@
     "title": "Formation"
   },
   "softSkills": {
-    "title": "Soft Skills"
+    "title": "Soft Skills & Langues"
+  },
+  "interests": {
+    "title": "Centres d'intérêt"
   },
   "contact": {
     "title": "Discutons",

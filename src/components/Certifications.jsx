@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { FaTrophy, FaBullseye } from 'react-icons/fa'
 import { certifications } from '../data/certifications.js'
 
 function CertCard({ cert, index, lang, t }) {
+  const Icon = cert.status === 'obtained' ? FaTrophy : FaBullseye
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -12,7 +14,9 @@ function CertCard({ cert, index, lang, t }) {
       className="bg-bg-card border border-border rounded-xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-[3px] transition-all duration-200"
     >
       <div className="flex items-start justify-between mb-3">
-        <span className="text-3xl">{cert.icon}</span>
+        <span className="text-2xl text-blue">
+          <Icon />
+        </span>
         <span
           className={`px-2 py-0.5 rounded-full text-xs font-semibold ${
             cert.status === 'obtained' ? 'bg-success-bg text-success-text' : 'bg-tag-bg text-tag-text animate-pulse'

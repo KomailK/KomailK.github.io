@@ -1,8 +1,16 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { SiTryhackme, SiHackthebox, SiRootme } from 'react-icons/si'
 import { platforms } from '../data/platforms.js'
 
+const ICONS = {
+  tryhackme: SiTryhackme,
+  hackthebox: SiHackthebox,
+  rootme: SiRootme,
+}
+
 function PlatformCard({ platform, index, lang, t }) {
+  const Icon = ICONS[platform.logo]
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -13,7 +21,9 @@ function PlatformCard({ platform, index, lang, t }) {
       style={{ borderTop: `4px solid ${platform.color}` }}
     >
       <div className="flex items-center gap-3 mb-2">
-        <span className="text-3xl">{platform.logo}</span>
+        <span className="text-3xl shrink-0" style={{ color: platform.color }}>
+          <Icon />
+        </span>
         <div>
           <h3 className="font-bold text-navy">{platform.name}</h3>
           <p className="text-sm text-text-muted font-mono">{platform.handle}</p>

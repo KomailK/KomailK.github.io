@@ -16,12 +16,12 @@ function Hero() {
   }, [roles.length])
 
   return (
-    <section className="flex flex-col items-center justify-center bg-bg-primary px-6 pt-20 pb-[60px] text-center">
+    <section className="flex flex-col items-center justify-center bg-bg-primary px-6 pt-44 pb-36 text-center">
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl md:text-6xl font-bold text-navy mb-4"
+        className="text-5xl md:text-7xl font-bold text-navy mb-6"
       >
         Komail Kassimaly
       </motion.h1>
@@ -30,7 +30,7 @@ function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="h-8 mb-10"
+        className="h-10 mb-16"
       >
         <AnimatePresence mode="wait">
           <motion.p
@@ -39,7 +39,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4 }}
-            className="text-lg md:text-xl font-mono text-blue"
+            className="text-xl md:text-2xl font-mono text-blue"
           >
             {roles[roleIndex]}
           </motion.p>

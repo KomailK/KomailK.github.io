@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import { SiTryhackme, SiHackthebox, SiRootme } from 'react-icons/si'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -13,9 +14,9 @@ const SOCIALS = [
 ]
 
 const PLATFORM_LINKS = [
-  { emoji: '🎯', href: 'https://tryhackme.com/p/Komd5', label: 'TryHackMe' },
-  { emoji: '📦', href: 'https://app.hackthebox.com/profile/Komd5', label: 'HTB Academy' },
-  { emoji: '🔐', href: 'https://www.root-me.org/Komd5', label: 'Root Me' },
+  { icon: SiTryhackme, color: '#88cc14', href: 'https://tryhackme.com/p/Komd5', label: 'TryHackMe' },
+  { icon: SiHackthebox, color: '#9fef00', href: 'https://app.hackthebox.com/profile/Komd5', label: 'HTB Academy' },
+  { icon: SiRootme, color: '#ff6b35', href: 'https://www.root-me.org/Komd5', label: 'Root Me' },
 ]
 
 function About() {
@@ -58,8 +59,9 @@ function About() {
                 rel="noreferrer"
                 aria-label={p.label}
                 className="text-2xl hover:opacity-70 transition-opacity"
+                style={{ color: p.color }}
               >
-                {p.emoji}
+                <p.icon />
               </a>
             ))}
           </div>

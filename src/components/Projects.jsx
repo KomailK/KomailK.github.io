@@ -1,9 +1,17 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { FaNetworkWired, FaUserSecret, FaComments } from 'react-icons/fa'
 import { projects } from '../data/projects.js'
 
+const ICONS = {
+  infrastructure: FaNetworkWired,
+  pentest: FaUserSecret,
+  chat: FaComments,
+}
+
 function ProjectCard({ project, index, lang, t, onOpen }) {
+  const Icon = ICONS[project.icon]
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -12,7 +20,9 @@ function ProjectCard({ project, index, lang, t, onOpen }) {
       transition={{ duration: 0.4, delay: index * 0.1 }}
       className="bg-bg-card border border-border rounded-xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-[3px] transition-all duration-200 flex flex-col"
     >
-      <div className="text-4xl mb-4">{project.icon}</div>
+      <div className="text-3xl text-blue mb-4">
+        <Icon />
+      </div>
       <h3 className="text-lg font-bold text-navy mb-2">{project.title[lang]}</h3>
       <p className="text-sm text-text-muted mb-4 flex-1">{project.shortDesc[lang]}</p>
       <div className="flex flex-wrap gap-2 mb-4">
@@ -48,6 +58,7 @@ function Projects() {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
   const [selected, setSelected] = useState(null)
+  const SelectedIcon = selected ? ICONS[selected.icon] : null
 
   return (
     <section id="projects" className="py-14 bg-bg-primary px-6">
@@ -83,7 +94,9 @@ function Projects() {
               onClick={(e) => e.stopPropagation()}
               className="bg-bg-card rounded-xl p-8 max-w-lg w-full shadow-card-hover"
             >
-              <div className="text-4xl mb-4">{selected.icon}</div>
+              <div className="text-3xl text-blue mb-4">
+                <SelectedIcon />
+              </div>
               <h3 className="text-xl font-bold text-navy mb-3">{selected.title[lang]}</h3>
               <p className="text-text-primary leading-relaxed mb-4">{selected.fullDesc[lang]}</p>
               <div className="flex flex-wrap gap-2 mb-6">

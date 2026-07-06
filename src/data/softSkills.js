@@ -1,50 +1,42 @@
 export const softSkills = [
   {
-    icon: "💪",
-    name: { fr: "Persévérance", en: "Perseverance" },
+    icon: "perseverance",
+    name: { fr: "Persévérant", en: "Perseverant" },
     desc: {
       fr: "CEH en préparation, plateformes cyber en parallèle de l'alternance.",
       en: "Preparing CEH while working and studying simultaneously.",
     },
   },
   {
-    icon: "🔍",
-    name: { fr: "Rigueur & Minutie", en: "Thoroughness" },
+    icon: "conscientious",
+    name: { fr: "Consciencieux", en: "Conscientious" },
     desc: {
-      fr: "Analyse de 150-200 alertes/jour avec précision et méthode.",
-      en: "Analysing 150-200 alerts/day with precision and methodology.",
+      fr: "Rédaction rigoureuse des documents techniques et suivi des processus internes.",
+      en: "Careful technical documentation and adherence to internal processes.",
     },
   },
   {
-    icon: "🔄",
-    name: { fr: "Adaptabilité", en: "Adaptability" },
+    icon: "meticulous",
+    name: { fr: "Minutieux", en: "Meticulous" },
     desc: {
-      fr: "Stage à Londres, 6-7 clients simultanés aux besoins variés.",
-      en: "Internship in London, managing 6-7 clients with different needs.",
+      fr: "Analyse de 150 à 200 alertes/jour avec précision et méthode.",
+      en: "Analysing 150 to 200 alerts/day with precision and methodology.",
     },
   },
   {
-    icon: "🤝",
-    name: { fr: "Leadership", en: "Leadership" },
+    icon: "adaptability",
+    name: { fr: "Capacité d'adaptation", en: "Adaptability" },
     desc: {
-      fr: "Chef d'équipe sur des projets école, initiatives en comités clients.",
-      en: "Team lead on school projects, self-initiated client committees.",
+      fr: "Stage à Londres, 6 à 7 clients simultanés aux besoins variés.",
+      en: "Internship in London, managing 6 to 7 clients with different needs.",
     },
   },
-  {
-    icon: "💬",
-    name: { fr: "Communication", en: "Communication" },
-    desc: {
-      fr: "Rédaction de docs techniques, présentations RSSI, +100 mails clients.",
-      en: "Technical writing, CISO presentations, 100+ client emails.",
-    },
-  },
-  {
-    icon: "🌍",
-    name: { fr: "Ouverture internationale", en: "International mindset" },
-    desc: {
-      fr: "6 langues, expérience Londres, recherche VIE monde entier.",
-      en: "6 languages, London experience, open to worldwide VIE opportunities.",
-    },
-  },
+]
+
+export const languages = [
+  { name: { fr: "Anglais", en: "English" }, level: "C1", note: "TOEIC 965/990" },
+  { name: { fr: "Goudjrati", en: "Gujarati" }, level: "A2" },
+  { name: { fr: "Hindi/Ourdou", en: "Hindi/Urdu" }, level: "A2" },
+  { name: { fr: "Espagnol", en: "Spanish" }, level: "A1" },
+  { name: { fr: "Mandarin", en: "Mandarin" }, level: "A1" },
 ]

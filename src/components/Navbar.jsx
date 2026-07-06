@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { FaSun, FaMoon } from 'react-icons/fa'
 
 const NAV_LINKS = [
   { href: '#about', key: 'about' },
@@ -9,6 +10,7 @@ const NAV_LINKS = [
   { href: '#platforms', key: 'platforms' },
   { href: '#certifications', key: 'certifications' },
   { href: '#softskills', key: 'softSkills' },
+  { href: '#interests', key: 'interests' },
   { href: '#contact', key: 'contact' },
 ]
 
@@ -53,7 +55,7 @@ function Navbar({ theme, toggleTheme }) {
           KK
         </a>
 
-        <nav className="hidden lg:flex items-center gap-5">
+        <nav className="hidden lg:flex items-center gap-4">
           {NAV_LINKS.map((link) => (
             <a
               key={link.key}
@@ -70,10 +72,10 @@ function Navbar({ theme, toggleTheme }) {
         <div className="flex items-center gap-3">
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg border border-border bg-bg-card text-text-primary hover:bg-bg-secondary transition-colors"
+            className="hidden lg:inline-flex items-center rounded-full border border-border px-3 py-1 text-xs font-semibold text-navy hover:bg-bg-secondary transition-colors"
             aria-label="Toggle theme"
           >
-            {theme === 'light' ? '🌙' : '☀️'}
+            {theme === 'light' ? <FaMoon /> : <FaSun />}
           </button>
 
           <button
@@ -105,12 +107,21 @@ function Navbar({ theme, toggleTheme }) {
               {t(`nav.${link.key}`)}
             </a>
           ))}
-          <button
-            onClick={toggleLang}
-            className="rounded-full border border-border px-4 py-2 text-sm font-semibold text-navy"
-          >
-            {i18n.language === 'fr' ? 'EN' : 'FR'}
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={toggleTheme}
+              className="inline-flex items-center rounded-full border border-border px-4 py-2 text-sm font-semibold text-navy"
+              aria-label="Toggle theme"
+            >
+              {theme === 'light' ? <FaMoon /> : <FaSun />}
+            </button>
+            <button
+              onClick={toggleLang}
+              className="rounded-full border border-border px-4 py-2 text-sm font-semibold text-navy"
+            >
+              {i18n.language === 'fr' ? 'EN' : 'FR'}
+            </button>
+          </div>
         </div>
       )}
     </header>

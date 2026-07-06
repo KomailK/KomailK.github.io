@@ -4,7 +4,7 @@ export const platforms = [
     handle: "Komd5",
     url: "https://tryhackme.com/p/Komd5",
     color: "#88cc14",
-    logo: "🎯",
+    logo: "tryhackme",
     modules: [
       {
         name: "AI1: Professional Certification (AI Security) — COAE Path",
@@ -29,7 +29,7 @@ export const platforms = [
     handle: "Komd5",
     url: "https://app.hackthebox.com/profile/Komd5",
     color: "#9fef00",
-    logo: "📦",
+    logo: "hackthebox",
     modules: [
       {
         name: "AI Red Teamer Path",
@@ -46,7 +46,7 @@ export const platforms = [
     handle: "Komd5",
     url: "https://www.root-me.org/Komd5",
     color: "#ff6b35",
-    logo: "🔐",
+    logo: "rootme",
     modules: [
       {
         name: "Challenges Web — Client",

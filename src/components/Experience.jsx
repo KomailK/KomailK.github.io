@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { experiences } from '../data/experiences.js'
@@ -8,8 +7,7 @@ const BADGE_COLORS = {
   'DMG Media': 'bg-purple-bg text-purple-text',
 }
 
-function ExperienceCard({ exp, index, lang, t }) {
-  const [expanded, setExpanded] = useState(false)
+function ExperienceCard({ exp, index, lang }) {
   const isRight = index % 2 === 1
 
   const variants = {
@@ -46,20 +44,11 @@ function ExperienceCard({ exp, index, lang, t }) {
           </div>
         )}
 
-        {expanded && (
-          <ul className="list-disc list-inside space-y-1 text-sm text-text-primary mb-4">
-            {exp.bullets[lang].map((bullet, i) => (
-              <li key={i}>{bullet}</li>
-            ))}
-          </ul>
-        )}
-
-        <button
-          onClick={() => setExpanded(!expanded)}
-          className="text-sm font-semibold text-blue hover:underline mb-4"
-        >
-          {expanded ? t('experience.seeLess') : t('experience.seeMore')}
-        </button>
+        <ul className="list-disc list-inside space-y-1 text-sm text-text-primary mb-4">
+          {exp.bullets[lang].map((bullet, i) => (
+            <li key={i}>{bullet}</li>
+          ))}
+        </ul>
 
         <div className="flex flex-wrap gap-2">
           {exp.tools.map((tool) => (
@@ -84,7 +73,7 @@ function Experience() {
         <div className="relative">
           <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-blue to-timeline-line md:-translate-x-1/2" />
           {experiences.map((exp, index) => (
-            <ExperienceCard key={exp.id} exp={exp} index={index} lang={lang} t={t} />
+            <ExperienceCard key={exp.id} exp={exp} index={index} lang={lang} />
           ))}
         </div>
       </div>

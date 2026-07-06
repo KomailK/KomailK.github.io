@@ -1,8 +1,15 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { FaGraduationCap, FaGlobeAmericas } from 'react-icons/fa'
 import { education } from '../data/education.js'
 
+const ICONS = {
+  graduation: FaGraduationCap,
+  globe: FaGlobeAmericas,
+}
+
 function EducationCard({ edu, index, lang }) {
+  const Icon = ICONS[edu.icon]
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -12,7 +19,9 @@ function EducationCard({ edu, index, lang }) {
       className="bg-bg-card border border-border rounded-xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-[3px] transition-all duration-200"
     >
       <div className="flex items-start gap-3 mb-3">
-        <span className="text-3xl">{edu.logo}</span>
+        <span className="text-2xl text-blue shrink-0">
+          <Icon />
+        </span>
         <div>
           <h3 className="text-lg font-bold text-navy">{edu.degree[lang]}</h3>
           <p className="text-sm text-text-muted">

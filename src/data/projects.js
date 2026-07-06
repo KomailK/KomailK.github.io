@@ -1,18 +1,18 @@
 export const projects = [
   {
     id: 1,
-    icon: "🔒",
+    icon: "infrastructure",
     title: {
       fr: "Infrastructure Sécurisée",
       en: "Secure Infrastructure",
     },
     shortDesc: {
-      fr: "Conception et déploiement d'une infrastructure réseau sécurisée en équipe de 5.",
-      en: "Design and deployment of a secure network infrastructure in a team of 5.",
+      fr: "Conception et déploiement d'une infrastructure réseau sécurisée, du firewall à l'annuaire Active Directory.",
+      en: "Design and deployment of a secure network infrastructure, from the firewall to the Active Directory.",
     },
     fullDesc: {
-      fr: "Chef d'une équipe de 5 personnes. Implémentation d'un Filer Windows, configuration d'un Firewall Pfsense, gestion des flux réseaux et Active Directory.",
-      en: "Led a 5-person team. Implemented a Windows File Server, configured Pfsense Firewall, managed network flows and Active Directory.",
+      fr: "En tant que chef d'une équipe de cinq personnes, conception et déploiement d'une infrastructure réseau sécurisée : configuration d'un firewall Pfsense, mise en place d'un serveur de fichiers Windows et gestion de l'Active Directory pour l'ensemble des flux réseau.",
+      en: "As lead of a five-person team, design and deployment of a secure network infrastructure: Pfsense firewall configuration, Windows file server setup and Active Directory management for all network flows.",
     },
     tools: ["Pfsense", "Active Directory", "Windows Server", "Réseau"],
     github: null,
@@ -20,18 +20,18 @@ export const projects = [
   },
   {
     id: 2,
-    icon: "🤖",
+    icon: "pentest",
     title: {
       fr: "Automatisation de Pentest",
       en: "Pentest Automation",
     },
     shortDesc: {
-      fr: "Outil d'automatisation générant des rapports d'audit de sécurité.",
-      en: "Automation tool generating security audit reports.",
+      fr: "Script Python automatisant la reconnaissance et la génération de rapports d'audit de sécurité.",
+      en: "Python script automating reconnaissance and security audit report generation.",
     },
     fullDesc: {
-      fr: "Développement d'un script Python automatisant les phases de reconnaissance et de reporting lors d'audits de sécurité. Génération de rapports structurés au format PDF.",
-      en: "Python script automating reconnaissance and reporting phases during security audits. Generates structured PDF reports.",
+      fr: "Développement d'un outil Python automatisant les phases de reconnaissance d'un audit de sécurité (Nmap, Legion) et générant un rapport structuré au format PDF, réduisant le temps de rédaction manuelle.",
+      en: "Development of a Python tool automating the reconnaissance phase of a security audit (Nmap, Legion) and generating a structured PDF report, cutting down manual reporting time.",
     },
     tools: ["Python", "Kali Linux", "Nmap", "Legion"],
     github: null,
@@ -39,18 +39,18 @@ export const projects = [
   },
   {
     id: 3,
-    icon: "💬",
+    icon: "chat",
     title: {
       fr: "Chat Room Sécurisée",
       en: "Secure Chat Room",
     },
     shortDesc: {
-      fr: "Application de chat chiffrée de bout en bout via SSL/TLS.",
-      en: "End-to-end encrypted chat application using SSL/TLS.",
+      fr: "Messagerie client-serveur chiffrée de bout en bout avec Sockets et SSL/TLS.",
+      en: "End-to-end encrypted client-server messaging using Sockets and SSL/TLS.",
     },
     fullDesc: {
-      fr: "Développement d'une application de messagerie sécurisée en Python utilisant les Sockets et le protocole SSL/TLS avec OpenSSL. Chiffrement des communications client-serveur.",
-      en: "Secure messaging application in Python using Sockets and SSL/TLS protocol with OpenSSL. Encrypted client-server communications.",
+      fr: "Application de messagerie développée en Python avec des Sockets et le protocole SSL/TLS (OpenSSL), garantissant la confidentialité des échanges entre client et serveur.",
+      en: "Messaging application built in Python using Sockets and the SSL/TLS protocol (OpenSSL), ensuring confidential client-server communication.",
     },
     tools: ["Python", "Socket", "SSL/TLS", "OpenSSL"],
     github: null,

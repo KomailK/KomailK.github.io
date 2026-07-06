@@ -9,7 +9,7 @@ function PlatformCard({ platform, index, lang, t }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="bg-bg-card border border-border rounded-xl p-6 shadow-sm"
+      className="bg-bg-card border border-border rounded-xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-[3px] transition-all duration-200"
       style={{ borderTop: `4px solid ${platform.color}` }}
     >
       <div className="flex items-center gap-3 mb-2">
@@ -36,8 +36,8 @@ function PlatformCard({ platform, index, lang, t }) {
               <span
                 className={`shrink-0 px-2 py-0.5 rounded-full text-xs font-semibold ${
                   module.status === 'complété'
-                    ? 'bg-green-100 text-green-700'
-                    : 'bg-blue-100 text-blue-700 animate-pulse'
+                    ? 'bg-success-bg text-success-text'
+                    : 'bg-tag-bg text-tag-text animate-pulse'
                 }`}
               >
                 {module.status === 'complété' ? t('platforms.status.completed') : t('platforms.status.in_progress')}
@@ -58,10 +58,10 @@ function Platforms() {
   const lang = i18n.language
 
   return (
-    <section id="platforms" className="py-24 bg-bg-primary px-4">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-navy text-center mb-16">{t('platforms.title')}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section id="platforms" className="py-14 bg-bg-secondary px-6">
+      <div className="max-w-[1100px] mx-auto">
+        <h2 className="text-3xl font-bold text-navy text-center mb-8">{t('platforms.title')}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {platforms.map((platform, index) => (
             <PlatformCard key={platform.name} platform={platform} index={index} lang={lang} t={t} />
           ))}

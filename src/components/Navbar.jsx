@@ -4,13 +4,15 @@ import { useTranslation } from 'react-i18next'
 const NAV_LINKS = [
   { href: '#about', key: 'about' },
   { href: '#experience', key: 'experience' },
+  { href: '#education', key: 'education' },
   { href: '#projects', key: 'projects' },
   { href: '#platforms', key: 'platforms' },
   { href: '#certifications', key: 'certifications' },
+  { href: '#softskills', key: 'softSkills' },
   { href: '#contact', key: 'contact' },
 ]
 
-function Navbar() {
+function Navbar({ theme, toggleTheme }) {
   const { t, i18n } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -42,16 +44,16 @@ function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 h-16 transition-all ${
-        scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-white'
+      className={`fixed top-0 left-0 right-0 z-50 h-16 bg-bg-card border-b border-border transition-all ${
+        scrolled ? 'backdrop-blur-md shadow-navbar' : ''
       }`}
     >
-      <div className="max-w-6xl mx-auto h-full px-4 flex items-center justify-between">
+      <div className="max-w-[1100px] mx-auto h-full px-6 flex items-center justify-between">
         <a href="#" className="text-xl font-bold text-navy font-mono">
           KK
         </a>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-5">
           {NAV_LINKS.map((link) => (
             <a
               key={link.key}
@@ -67,15 +69,23 @@ function Navbar() {
 
         <div className="flex items-center gap-3">
           <button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg border border-border bg-bg-card text-text-primary hover:bg-bg-secondary transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
+
+          <button
             onClick={toggleLang}
-            className="hidden md:inline-flex items-center rounded-full border border-border px-3 py-1 text-xs font-semibold text-navy hover:bg-bg-secondary transition-colors"
+            className="hidden lg:inline-flex items-center rounded-full border border-border px-3 py-1 text-xs font-semibold text-navy hover:bg-bg-secondary transition-colors"
           >
             {i18n.language === 'fr' ? 'EN' : 'FR'}
           </button>
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-2xl text-navy"
+            className="lg:hidden text-2xl text-navy"
             aria-label="Menu"
           >
             {menuOpen ? '✕' : '☰'}
@@ -84,7 +94,7 @@ function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden fixed inset-0 top-16 bg-white z-40 flex flex-col items-center justify-center gap-8">
+        <div className="lg:hidden fixed inset-0 top-16 bg-bg-card z-40 flex flex-col items-center justify-center gap-6 overflow-y-auto py-8">
           {NAV_LINKS.map((link) => (
             <a
               key={link.key}

@@ -23,13 +23,13 @@ function About() {
   const skills = t('about.skills', { returnObjects: true })
 
   return (
-    <section id="about" className="py-24 bg-bg-secondary px-4">
+    <section id="about" className="py-14 bg-bg-secondary px-6">
       <motion.div
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center"
+        className="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-10 items-center"
       >
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <div className="w-48 h-48 rounded-full bg-bg-card border border-border flex items-center justify-center text-5xl font-bold text-navy font-mono mb-6">
@@ -73,14 +73,14 @@ function About() {
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="px-3 py-1 rounded-full bg-bg-card border border-border text-sm font-mono text-navy"
+                className="px-3 py-1 rounded-full bg-tag-bg border border-tag-border text-sm font-mono text-tag-text"
               >
                 {skill}
               </span>
             ))}
           </div>
 
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 font-semibold text-sm">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-success-bg text-success-text font-semibold text-sm">
             ● {t('about.availability')}
           </span>
         </div>

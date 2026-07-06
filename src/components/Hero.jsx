@@ -16,7 +16,7 @@ function Hero() {
   }, [roles.length])
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-bg-primary px-4 text-center">
+    <section className="flex flex-col items-center justify-center bg-bg-primary px-6 pt-20 pb-[60px] text-center">
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ function Hero() {
             ↓ {t('hero.ctaCv')}
           </button>
           {cvOpen && (
-            <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-white border border-border rounded-lg shadow-lg overflow-hidden w-40 z-10">
+            <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-bg-card border border-border rounded-lg shadow-card-hover overflow-hidden w-40 z-10">
               <a
                 href="/cv_fr.pdf"
                 download

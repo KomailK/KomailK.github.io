@@ -9,6 +9,11 @@ export const experiences = [
     location: "La Défense, Paris",
     type: { fr: "Alternance", en: "Apprenticeship" },
     period: "Sept. 2025 — Présent",
+    metrics: [
+      { value: "+200", label: { fr: "alertes/jour", en: "alerts/day" } },
+      { value: "6-7", label: { fr: "clients gérés", en: "clients managed" } },
+      { value: "2", label: { fr: "comités pilotage", en: "steering committees" } },
+    ],
     bullets: {
       fr: [
         "Analyse et traitement d'alertes de sécurité (+200/jour)",
@@ -50,6 +55,11 @@ export const experiences = [
     location: "La Défense, Paris",
     type: { fr: "Stage", en: "Internship" },
     period: "Nov. 2024 — Avr. 2025",
+    metrics: [
+      { value: "150+", label: { fr: "alertes/jour", en: "alerts/day" } },
+      { value: "3", label: { fr: "clients gérés", en: "clients managed" } },
+      { value: "5", label: { fr: "mois de mission", en: "months" } },
+    ],
     bullets: {
       fr: [
         "Analyse et traitement d'alertes de sécurité (150+/jour)",
@@ -84,6 +94,9 @@ export const experiences = [
     location: "Londres, Royaume-Uni",
     type: { fr: "Stage", en: "Internship" },
     period: "Août — Sept. 2025",
+    metrics: [
+      { value: "1", label: { fr: "mois en Londres", en: "month in London" } },
+    ],
     bullets: {
       fr: [
         "Analyse e-mails suspects (spam/phishing)",

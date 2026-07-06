@@ -12,7 +12,7 @@ function Contact() {
   const { t } = useTranslation()
 
   return (
-    <section id="contact" className="py-24 bg-bg-secondary px-4">
+    <section id="contact" className="py-14 bg-bg-secondary px-6">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ function Contact() {
         className="max-w-2xl mx-auto text-center"
       >
         <h2 className="text-3xl font-bold text-navy mb-4">{t('contact.title')}</h2>
-        <p className="text-text-muted mb-10">{t('contact.subtitle')}</p>
+        <p className="text-text-muted mb-8">{t('contact.subtitle')}</p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           {CONTACT_LINKS.map((link) => (
@@ -30,7 +30,7 @@ function Contact() {
               href={link.href}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-bg-card border border-border text-navy font-semibold hover:bg-white hover:shadow-sm transition-all"
+              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-bg-card border border-border text-navy font-semibold shadow-card hover:shadow-card-hover hover:-translate-y-[3px] transition-all duration-200"
             >
               <link.icon /> {link.label}
             </a>

@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next'
 import { experiences } from '../data/experiences.js'
 
 const BADGE_COLORS = {
-  ITrust: 'bg-blue-100 text-blue-700',
-  'DMG Media': 'bg-purple-100 text-purple-700',
+  ITrust: 'bg-tag-bg text-tag-text',
+  'DMG Media': 'bg-purple-bg text-purple-text',
 }
 
 function ExperienceCard({ exp, index, lang, t }) {
@@ -18,22 +18,33 @@ function ExperienceCard({ exp, index, lang, t }) {
   }
 
   return (
-    <div className={`relative flex justify-end mb-12 ${isRight ? 'md:justify-end' : 'md:justify-start'}`}>
+    <div className={`relative flex justify-end mb-8 ${isRight ? 'md:justify-end' : 'md:justify-start'}`}>
       <motion.div
         variants={variants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="w-full md:w-[45%] bg-bg-card border border-border rounded-xl p-6 shadow-sm"
+        className="w-full md:w-[45%] bg-bg-card border border-border rounded-xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-[3px] transition-all duration-200"
       >
-        <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 ${BADGE_COLORS[exp.company] || 'bg-blue-100 text-blue-700'}`}>
+        <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 ${BADGE_COLORS[exp.company] || 'bg-tag-bg text-tag-text'}`}>
           {exp.company}
         </span>
         <h3 className="text-lg font-bold text-navy">{exp.title[lang]}</h3>
         <p className="text-sm text-text-muted mb-1">
           {exp.company} — {exp.location} — {exp.type[lang]}
         </p>
-        <p className="text-sm font-mono text-blue mb-4">{exp.period}</p>
+        <p className="text-sm font-mono text-blue mb-3">{exp.period}</p>
+
+        {exp.metrics && exp.metrics.length > 0 && (
+          <div className="flex gap-4 py-3 my-3 border-t border-b border-border">
+            {exp.metrics.map((m, i) => (
+              <div key={i} className="flex flex-col items-center flex-1">
+                <span className="text-[22px] font-bold text-blue leading-none">{m.value}</span>
+                <span className="text-[11px] text-text-muted text-center mt-1">{m.label[lang]}</span>
+              </div>
+            ))}
+          </div>
+        )}
 
         {expanded && (
           <ul className="list-disc list-inside space-y-1 text-sm text-text-primary mb-4">
@@ -52,7 +63,7 @@ function ExperienceCard({ exp, index, lang, t }) {
 
         <div className="flex flex-wrap gap-2">
           {exp.tools.map((tool) => (
-            <span key={tool} className="px-2 py-1 rounded-md bg-bg-secondary text-xs font-mono text-navy">
+            <span key={tool} className="px-2 py-0.5 rounded-md bg-tag-bg border border-tag-border text-xs font-mono text-tag-text">
               {tool}
             </span>
           ))}
@@ -67,11 +78,11 @@ function Experience() {
   const lang = i18n.language
 
   return (
-    <section id="experience" className="py-24 bg-bg-primary px-4">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-navy text-center mb-16">{t('experience.title')}</h2>
+    <section id="experience" className="py-14 bg-bg-secondary px-6">
+      <div className="max-w-[1100px] mx-auto">
+        <h2 className="text-3xl font-bold text-navy text-center mb-8">{t('experience.title')}</h2>
         <div className="relative">
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-blue to-timeline-line md:-translate-x-1/2" />
           {experiences.map((exp, index) => (
             <ExperienceCard key={exp.id} exp={exp} index={index} lang={lang} t={t} />
           ))}

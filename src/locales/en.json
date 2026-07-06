@@ -2,9 +2,11 @@
   "nav": {
     "about": "About",
     "experience": "Experience",
+    "education": "Education",
     "projects": "Projects",
     "platforms": "Platforms",
     "certifications": "Certifications",
+    "softSkills": "Soft Skills",
     "contact": "Contact"
   },
   "hero": {
@@ -52,6 +54,12 @@
       "obtained": "Obtained",
       "in_progress": "In progress"
     }
+  },
+  "education": {
+    "title": "Education"
+  },
+  "softSkills": {
+    "title": "Soft Skills"
   },
   "contact": {
     "title": "Let's talk",

@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "platforms": "Platforms",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "roles": [
+      "SOC Analyst N1/N2",
+      "Cybersecurity Enthusiast",
+      "Blue Team | Red Team",
+      "Available September 2026"
+    ],
+    "ctaProjects": "See my projects",
+    "ctaContact": "Contact me",
+    "ctaCv": "CV",
+    "cvFr": "CV Français",
+    "cvEn": "CV English"
+  },
+  "about": {
+    "title": "About",
+    "bio": "Cybersecurity engineering student at Efrei Paris, currently working as a SOC Analyst N1/N2 at ITrust. Passionate about both offensive and defensive security, I am looking for my first full-time position or VIE starting September 2026.",
+    "availability": "Available September 2026",
+    "skills": ["SOC", "SIEM", "EDR", "Pentest", "Python", "Kali Linux", "Blue Team", "Red Team", "IAM", "Cloud Security"]
+  },
+  "experience": {
+    "title": "Experience",
+    "seeMore": "See more",
+    "seeLess": "See less"
+  },
+  "projects": {
+    "title": "Projects",
+    "details": "Details",
+    "github": "GitHub",
+    "close": "Close"
+  },
+  "platforms": {
+    "title": "Platforms",
+    "profile": "View profile",
+    "learning": "Key takeaway",
+    "status": {
+      "completed": "Completed",
+      "in_progress": "In progress"
+    }
+  },
+  "certifications": {
+    "title": "Certifications",
+    "status": {
+      "obtained": "Obtained",
+      "in_progress": "In progress"
+    }
+  },
+  "contact": {
+    "title": "Let's talk",
+    "subtitle": "Available for a full-time position or VIE in cybersecurity from September 2026"
+  },
+  "footer": {
+    "text": "Komail Kassimaly © 2026 — Built with React"
+  }
+}

@@ -1,0 +1,45 @@
+export const certifications = [
+  {
+    name: "Certified Ethical Hacker (CEH v13)",
+    org: "EC-Council",
+    date: { fr: "En cours — examen prévu fin 2026", en: "In progress — exam planned late 2026" },
+    status: "in_progress",
+    icon: "🎯",
+  },
+  {
+    name: "AI Security — AI1 Professional Certification",
+    org: "TryHackMe",
+    date: { fr: "En cours", en: "In progress" },
+    status: "in_progress",
+    icon: "🎯",
+  },
+  {
+    name: "AI Red Teamer Path",
+    org: "HTB Academy",
+    date: { fr: "En cours", en: "In progress" },
+    status: "in_progress",
+    icon: "🎯",
+  },
+  {
+    name: "Certificat Voltaire",
+    org: "Projet Voltaire",
+    date: { fr: "Juillet 2024", en: "July 2024" },
+    score: "780/1000 — Niveau affaires",
+    status: "obtained",
+    icon: "🏆",
+  },
+  {
+    name: "Cybersecurity Essentials",
+    org: "Cisco",
+    date: { fr: "Décembre 2023", en: "December 2023" },
+    status: "obtained",
+    icon: "🏆",
+  },
+  {
+    name: "Introduction to Cybersecurity",
+    org: "Cisco",
+    date: { fr: "Novembre 2023", en: "November 2023" },
+    status: "obtained",
+    icon: "🏆",
+  },
+]

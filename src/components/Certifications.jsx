@@ -1,0 +1,50 @@
+import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
+import { certifications } from '../data/certifications.js'
+
+function CertCard({ cert, index, lang, t }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.4, delay: index * 0.1 }}
+      className="bg-bg-card border border-border rounded-xl p-6 shadow-sm"
+    >
+      <div className="flex items-start justify-between mb-3">
+        <span className="text-3xl">{cert.icon}</span>
+        <span
+          className={`px-2 py-0.5 rounded-full text-xs font-semibold ${
+            cert.status === 'obtained' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700 animate-pulse'
+          }`}
+        >
+          {cert.status === 'obtained' ? t('certifications.status.obtained') : t('certifications.status.in_progress')}
+        </span>
+      </div>
+      <h3 className="font-bold text-navy mb-1">{cert.name}</h3>
+      <p className="text-sm text-text-muted mb-1">{cert.org}</p>
+      <p className="text-sm font-mono text-blue">{cert.date[lang]}</p>
+      {cert.score && <p className="text-xs text-text-muted mt-1">{cert.score}</p>}
+    </motion.div>
+  )
+}
+
+function Certifications() {
+  const { t, i18n } = useTranslation()
+  const lang = i18n.language
+
+  return (
+    <section id="certifications" className="py-24 bg-bg-secondary px-4">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold text-navy text-center mb-16">{t('certifications.title')}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {certifications.map((cert, index) => (
+            <CertCard key={cert.name} cert={cert} index={index} lang={lang} t={t} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Certifications

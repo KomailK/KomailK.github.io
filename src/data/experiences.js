@@ -1,0 +1,103 @@
+export const experiences = [
+  {
+    id: 1,
+    title: {
+      fr: "Analyste SOC N1/N2 — Alternance",
+      en: "SOC Analyst N1/N2 — Apprenticeship",
+    },
+    company: "ITrust",
+    location: "La Défense, Paris",
+    type: { fr: "Alternance", en: "Apprenticeship" },
+    period: "Sept. 2025 — Présent",
+    bullets: {
+      fr: [
+        "Analyse et traitement d'alertes de sécurité (+200/jour)",
+        "Gestion en simultané de 6-7 clients",
+        "Participation à mon initiative aux comités techniques des clients",
+        "Participation au comité de pilotage avec le RSSI — création d'un dashboard Graylog",
+        "Assistance à la mise en place d'un workflow d'automatisation sur Mindflow",
+        "Rédaction de documents techniques",
+      ],
+      en: [
+        "Security alert analysis and triage (+200/day)",
+        "Simultaneous management of 6-7 client accounts",
+        "Self-initiated participation in client technical committees",
+        "Participation in steering committee with CISO — Graylog dashboard creation",
+        "Support for alert automation workflow implementation on Mindflow",
+        "Technical documentation writing",
+      ],
+    },
+    tools: [
+      "Reveelium",
+      "TheHive",
+      "Eset",
+      "TrendMicro",
+      "SentinelOne",
+      "Grafana",
+      "Graylog",
+      "Mindflow",
+      "AbuseIPDB",
+      "VirusTotal",
+    ],
+  },
+  {
+    id: 2,
+    title: {
+      fr: "Analyste SOC N1/N2 — Stage (5 mois)",
+      en: "SOC Analyst N1/N2 — Internship (5 months)",
+    },
+    company: "ITrust",
+    location: "La Défense, Paris",
+    type: { fr: "Stage", en: "Internship" },
+    period: "Nov. 2024 — Avr. 2025",
+    bullets: {
+      fr: [
+        "Analyse et traitement d'alertes de sécurité (150+/jour)",
+        "Gestion en simultané de 3 clients",
+        "Rédaction de documents techniques",
+      ],
+      en: [
+        "Security alert analysis and triage (150+/day)",
+        "Simultaneous management of 3 client accounts",
+        "Technical documentation writing",
+      ],
+    },
+    tools: [
+      "Reveelium",
+      "TheHive",
+      "Eset",
+      "TrendMicro",
+      "Grafana",
+      "Graylog",
+      "Gitlab",
+      "AbuseIPDB",
+      "VirusTotal",
+    ],
+  },
+  {
+    id: 3,
+    title: {
+      fr: "Analyste SOC — Stage (1 mois)",
+      en: "SOC Analyst — Internship (1 month)",
+    },
+    company: "DMG Media",
+    location: "Londres, Royaume-Uni",
+    type: { fr: "Stage", en: "Internship" },
+    period: "Août — Sept. 2025",
+    bullets: {
+      fr: [
+        "Analyse e-mails suspects (spam/phishing)",
+        "Traitement des alertes de sécurité et participation aux processus internes",
+        "Veille active en cybersécurité",
+        "Collaboration transversale avec les équipes du pôle IT",
+      ],
+      en: [
+        "Suspicious email analysis (spam/phishing)",
+        "Security alert handling and internal process participation",
+        "Active cybersecurity monitoring",
+        "Cross-functional collaboration with IT teams",
+      ],
+    },
+    tools: ["Phishing analysis", "Security monitoring", "Threat Intelligence"],
+  },
+]

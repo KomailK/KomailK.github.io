@@ -31,10 +31,25 @@ function EducationCard({ edu, index, lang }) {
         </div>
       </div>
 
-      <ul className="list-disc list-inside space-y-1 text-sm text-text-primary mb-4">
-        {edu.highlights[lang].map((h, i) => (
-          <li key={i}>{h}</li>
-        ))}
+      <ul className="space-y-2 text-sm text-text-primary mb-4">
+        {edu.highlights[lang].map((h, i) => {
+          const [label, ...rest] = h.split(':')
+          const detail = rest.join(':').trim()
+          return (
+            <li key={i} className="flex gap-2.5">
+              <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-blue shrink-0" />
+              <span className="leading-relaxed">
+                {detail ? (
+                  <>
+                    <span className="font-semibold text-navy">{label.trim()}</span> : {detail}
+                  </>
+                ) : (
+                  label
+                )}
+              </span>
+            </li>
+          )
+        })}
       </ul>
 
       <div className="flex flex-wrap gap-2">

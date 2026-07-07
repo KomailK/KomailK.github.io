@@ -18,19 +18,16 @@
       "Disponible septembre 2026"
     ],
     "ctaProjects": "Voir mes projets",
-    "ctaContact": "Me contacter",
-    "ctaCv": "CV",
-    "cvFr": "CV Français",
-    "cvEn": "CV English"
+    "ctaContact": "Me contacter"
   },
   "about": {
     "title": "À propos",
-    "bio": "Étudiant ingénieur en cybersécurité à Efrei Paris, actuellement analyste SOC N1/N2 en alternance chez ITrust. Passionné par la sécurité offensive et défensive, je cherche mon premier CDI ou VIE en cybersécurité pour septembre 2026.",
+    "bio": "Étudiant ingénieur en cybersécurité à Efrei Paris, actuellement analyste SOC N1/N2 en alternance chez ITrust. Intéressé par la sécurité offensive et défensive, je cherche mon premier CDI ou VIE en cybersécurité pour septembre 2026.",
     "availability": "Disponible septembre 2026",
     "skills": ["SOC", "SIEM", "EDR", "Pentest", "Python", "Kali Linux", "Blue Team", "Red Team", "IAM", "Cloud Security"]
   },
   "experience": {
-    "title": "Expériences"
+    "title": "Expériences Professionnelles"
   },
   "projects": {
     "title": "Projets",

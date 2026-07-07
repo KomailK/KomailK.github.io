@@ -6,7 +6,6 @@ function Hero() {
   const { t } = useTranslation()
   const roles = t('hero.roles', { returnObjects: true })
   const [roleIndex, setRoleIndex] = useState(0)
-  const [cvOpen, setCvOpen] = useState(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -64,35 +63,6 @@ function Hero() {
         >
           {t('hero.ctaContact')}
         </a>
-
-        <div className="relative">
-          <button
-            onClick={() => setCvOpen(!cvOpen)}
-            className="px-6 py-3 rounded-lg border border-border text-navy font-semibold hover:bg-bg-secondary transition-colors"
-          >
-            ↓ {t('hero.ctaCv')}
-          </button>
-          {cvOpen && (
-            <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-bg-card border border-border rounded-lg shadow-card-hover overflow-hidden w-40 z-10">
-              <a
-                href="/cv_fr.pdf"
-                download
-                className="block px-4 py-2 text-sm hover:bg-bg-secondary text-left"
-                onClick={() => setCvOpen(false)}
-              >
-                {t('hero.cvFr')}
-              </a>
-              <a
-                href="/cv_en.pdf"
-                download
-                className="block px-4 py-2 text-sm hover:bg-bg-secondary text-left"
-                onClick={() => setCvOpen(false)}
-              >
-                {t('hero.cvEn')}
-              </a>
-            </div>
-          )}
-        </div>
       </motion.div>
     </section>
   )

@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useScroll, useSpring } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { experiences } from '../data/experiences.js'
 
@@ -44,9 +45,12 @@ function ExperienceCard({ exp, index, lang }) {
           </div>
         )}
 
-        <ul className="list-disc list-inside space-y-1 text-sm text-text-primary mb-4">
+        <ul className="space-y-2 text-sm text-text-primary mb-4">
           {exp.bullets[lang].map((bullet, i) => (
-            <li key={i}>{bullet}</li>
+            <li key={i} className="flex gap-2.5">
+              <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-blue shrink-0" />
+              <span className="leading-relaxed">{bullet}</span>
+            </li>
           ))}
         </ul>
 
@@ -65,13 +69,24 @@ function ExperienceCard({ exp, index, lang }) {
 function Experience() {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
+  const containerRef = useRef(null)
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start 0.75', 'end 0.4'],
+  })
+  const progress = useSpring(scrollYProgress, { stiffness: 300, damping: 40, restDelta: 0.001 })
 
   return (
     <section id="experience" className="py-14 bg-bg-secondary px-6">
       <div className="max-w-[1100px] mx-auto">
         <h2 className="text-3xl font-bold text-navy text-center mb-8">{t('experience.title')}</h2>
-        <div className="relative">
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-blue to-timeline-line md:-translate-x-1/2" />
+        <div ref={containerRef} className="relative">
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-[2px] bg-timeline-line md:-translate-x-1/2" />
+          <motion.div
+            style={{ scaleY: progress }}
+            className="absolute left-6 md:left-1/2 top-0 bottom-0 w-[2px] bg-blue origin-top md:-translate-x-1/2"
+          />
           {experiences.map((exp, index) => (
             <ExperienceCard key={exp.id} exp={exp} index={index} lang={lang} />
           ))}

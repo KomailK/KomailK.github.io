@@ -18,10 +18,7 @@
       "Available September 2026"
     ],
     "ctaProjects": "See my projects",
-    "ctaContact": "Contact me",
-    "ctaCv": "CV",
-    "cvFr": "CV Français",
-    "cvEn": "CV English"
+    "ctaContact": "Contact me"
   },
   "about": {
     "title": "About",
@@ -30,7 +27,7 @@
     "skills": ["SOC", "SIEM", "EDR", "Pentest", "Python", "Kali Linux", "Blue Team", "Red Team", "IAM", "Cloud Security"]
   },
   "experience": {
-    "title": "Experience"
+    "title": "Professional Experience"
   },
   "projects": {
     "title": "Projects",

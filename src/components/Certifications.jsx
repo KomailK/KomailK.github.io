@@ -11,10 +11,10 @@ function CertCard({ cert, index, lang, t }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="bg-bg-card border border-border rounded-xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-[3px] transition-all duration-200"
+      className="group bg-bg-card border border-border rounded-xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-[3px] transition-all duration-200"
     >
       <div className="flex items-start justify-between mb-3">
-        <span className="text-2xl text-blue">
+        <span className="text-2xl text-blue transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
           <Icon />
         </span>
         <span

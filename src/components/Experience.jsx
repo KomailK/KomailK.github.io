@@ -56,7 +56,7 @@ function ExperienceCard({ exp, index, lang }) {
 
         <div className="flex flex-wrap gap-2">
           {exp.tools.map((tool) => (
-            <span key={tool} className="px-2 py-0.5 rounded-md bg-tag-bg border border-tag-border text-xs font-mono text-tag-text">
+            <span key={tool} className="px-2 py-0.5 rounded-md bg-tag-bg border border-tag-border text-xs font-mono text-tag-text transition-transform duration-200 hover:scale-105">
               {tool}
             </span>
           ))}

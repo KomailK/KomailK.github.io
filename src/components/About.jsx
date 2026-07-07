@@ -46,7 +46,7 @@ function About() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={s.label}
-                className="text-2xl text-navy hover:text-blue transition-colors"
+                className="text-2xl text-navy hover:text-blue transition-all duration-200 hover:scale-110 inline-block"
               >
                 <s.icon />
               </a>
@@ -58,7 +58,7 @@ function About() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={p.label}
-                className="text-2xl hover:opacity-70 transition-opacity"
+                className="text-2xl hover:opacity-70 transition-all duration-200 hover:scale-110 inline-block"
                 style={{ color: p.color }}
               >
                 <p.icon />
@@ -75,7 +75,7 @@ function About() {
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="px-3 py-1 rounded-full bg-tag-bg border border-tag-border text-sm font-mono text-tag-text"
+                className="px-3 py-1 rounded-full bg-tag-bg border border-tag-border text-sm font-mono text-tag-text transition-transform duration-200 hover:scale-105"
               >
                 {skill}
               </span>

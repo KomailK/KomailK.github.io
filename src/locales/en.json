@@ -2,12 +2,9 @@
   "nav": {
     "about": "About",
     "experience": "Experience",
-    "education": "Education",
     "projects": "Projects",
-    "platforms": "Platforms",
     "certifications": "Certifications",
     "softSkills": "Soft Skills",
-    "interests": "Interests",
     "contact": "Contact"
   },
   "hero": {
@@ -35,15 +32,6 @@
     "github": "GitHub",
     "close": "Close"
   },
-  "platforms": {
-    "title": "Platforms",
-    "profile": "View profile",
-    "learning": "Key takeaway",
-    "status": {
-      "completed": "Completed",
-      "in_progress": "In progress"
-    }
-  },
   "certifications": {
     "title": "Certifications",
     "status": {
@@ -51,14 +39,8 @@
       "in_progress": "In progress"
     }
   },
-  "education": {
-    "title": "Education"
-  },
   "softSkills": {
     "title": "Soft Skills & Languages"
-  },
-  "interests": {
-    "title": "Interests"
   },
   "contact": {
     "title": "Let's talk",

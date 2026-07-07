@@ -18,9 +18,9 @@ function SkillCard({ skill, index, lang }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="bg-bg-card border border-border rounded-xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-[3px] transition-all duration-200 text-center"
+      className="group bg-bg-card border border-border rounded-xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-[3px] transition-all duration-200 text-center"
     >
-      <div className="text-3xl text-blue mb-3 flex justify-center">
+      <div className="text-3xl text-blue mb-3 flex justify-center transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
         <Icon />
       </div>
       <h3 className="font-bold text-navy mb-1">{skill.name[lang]}</h3>
@@ -47,7 +47,7 @@ function SoftSkills() {
           {languages.map((l) => (
             <span
               key={l.name.en}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-tag-bg border border-tag-border text-sm text-tag-text"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-tag-bg border border-tag-border text-sm text-tag-text transition-transform duration-200 hover:scale-105"
             >
               <FaLanguage />
               <span className="font-semibold">{l.name[lang]}</span>

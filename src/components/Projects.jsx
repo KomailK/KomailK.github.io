@@ -18,16 +18,16 @@ function ProjectCard({ project, index, lang, t, onOpen }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="bg-bg-card border border-border rounded-xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-[3px] transition-all duration-200 flex flex-col"
+      className="group bg-bg-card border border-border rounded-xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-[3px] transition-all duration-200 flex flex-col"
     >
-      <div className="text-3xl text-blue mb-4">
+      <div className="text-3xl text-blue mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
         <Icon />
       </div>
       <h3 className="text-lg font-bold text-navy mb-2">{project.title[lang]}</h3>
       <p className="text-sm text-text-muted mb-4 flex-1">{project.shortDesc[lang]}</p>
       <div className="flex flex-wrap gap-2 mb-4">
         {project.tools.map((tool) => (
-          <span key={tool} className="px-2 py-0.5 rounded-md bg-tag-bg border border-tag-border text-xs font-mono text-tag-text">
+          <span key={tool} className="px-2 py-0.5 rounded-md bg-tag-bg border border-tag-border text-xs font-mono text-tag-text transition-transform duration-200 hover:scale-105">
             {tool}
           </span>
         ))}
@@ -101,7 +101,7 @@ function Projects() {
               <p className="text-text-primary leading-relaxed mb-4">{selected.fullDesc[lang]}</p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {selected.tools.map((tool) => (
-                  <span key={tool} className="px-2 py-0.5 rounded-md bg-tag-bg border border-tag-border text-xs font-mono text-tag-text">
+                  <span key={tool} className="px-2 py-0.5 rounded-md bg-tag-bg border border-tag-border text-xs font-mono text-tag-text transition-transform duration-200 hover:scale-105">
                     {tool}
                   </span>
                 ))}

@@ -5,12 +5,9 @@ import { FaSun, FaMoon } from 'react-icons/fa'
 const NAV_LINKS = [
   { href: '#about', key: 'about' },
   { href: '#experience', key: 'experience' },
-  { href: '#education', key: 'education' },
   { href: '#projects', key: 'projects' },
-  { href: '#platforms', key: 'platforms' },
   { href: '#certifications', key: 'certifications' },
   { href: '#softskills', key: 'softSkills' },
-  { href: '#interests', key: 'interests' },
   { href: '#contact', key: 'contact' },
 ]
 

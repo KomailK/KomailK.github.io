@@ -8,14 +8,16 @@
     "contact": "Contact"
   },
   "hero": {
+    "banner": "Looking for a first full-time position/VIE in Cybersecurity – starting September 2026",
     "roles": [
       "SOC Analyst N1/N2",
       "Cybersecurity Enthusiast",
-      "Blue Team | Red Team",
-      "Available September 2026"
+      "Blue Team | Red Team"
     ],
     "ctaProjects": "See my projects",
-    "ctaContact": "Contact me"
+    "ctaContact": "Contact me",
+    "ctaEmail": "Send an email",
+    "ctaLinkedin": "LinkedIn message"
   },
   "about": {
     "title": "About",

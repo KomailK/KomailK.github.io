@@ -43,16 +43,16 @@ function SoftSkills() {
           ))}
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="flex flex-wrap justify-center gap-4">
           {languages.map((l) => (
             <span
               key={l.name.en}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-tag-bg border border-tag-border text-sm text-tag-text transition-transform duration-200 hover:scale-105"
+              className="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-tag-bg border border-tag-border text-lg text-tag-text transition-transform duration-200 hover:scale-105"
             >
-              <FaLanguage />
+              <FaLanguage className="text-xl" />
               <span className="font-semibold">{l.name[lang]}</span>
-              <span className="font-mono">{l.level}</span>
-              {l.note && <span className="text-text-muted">({l.note})</span>}
+              <span className="font-mono">{l.level[lang]}</span>
+              {l.note && <span className="text-text-muted text-base">({l.note})</span>}
             </span>
           ))}
         </div>

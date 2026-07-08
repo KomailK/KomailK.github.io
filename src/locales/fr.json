@@ -8,14 +8,16 @@
     "contact": "Contact"
   },
   "hero": {
+    "banner": "Recherche d'un premier emploi/VIE en Cybersécurité – à partir de septembre 2026",
     "roles": [
       "Analyste SOC N1/N2",
       "Cybersecurity Enthusiast",
-      "Blue Team | Red Team",
-      "Disponible septembre 2026"
+      "Blue Team | Red Team"
     ],
     "ctaProjects": "Voir mes projets",
-    "ctaContact": "Me contacter"
+    "ctaContact": "Me contacter",
+    "ctaEmail": "Envoyer un email",
+    "ctaLinkedin": "Message LinkedIn"
   },
   "about": {
     "title": "À propos",

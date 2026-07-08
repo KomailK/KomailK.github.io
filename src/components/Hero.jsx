@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { FaSearch, FaEnvelope, FaLinkedin } from 'react-icons/fa'
 
 function Hero() {
   const { t } = useTranslation()
   const roles = t('hero.roles', { returnObjects: true })
   const [roleIndex, setRoleIndex] = useState(0)
+  const [contactOpen, setContactOpen] = useState(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -16,10 +18,20 @@ function Hero() {
 
   return (
     <section className="flex flex-col items-center justify-center bg-bg-primary px-6 pt-44 pb-36 text-center">
-      <motion.h1
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
+        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-tag-bg border border-tag-border text-tag-text text-sm font-semibold mb-6"
+      >
+        <FaSearch />
+        {t('hero.banner')}
+      </motion.div>
+
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.15 }}
         className="text-5xl md:text-7xl font-bold text-navy mb-6"
       >
         Komail Kassimaly
@@ -28,7 +40,7 @@ function Hero() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
         className="h-10 mb-16"
       >
         <AnimatePresence mode="wait">
@@ -57,12 +69,35 @@ function Hero() {
         >
           {t('hero.ctaProjects')} ↓
         </a>
-        <a
-          href="#contact"
-          className="px-6 py-3 rounded-lg border border-navy text-navy font-semibold hover:bg-bg-secondary transition-colors"
-        >
-          {t('hero.ctaContact')}
-        </a>
+
+        <div className="relative">
+          <button
+            onClick={() => setContactOpen(!contactOpen)}
+            className="px-6 py-3 rounded-lg border border-navy text-navy font-semibold hover:bg-bg-secondary transition-colors"
+          >
+            {t('hero.ctaContact')}
+          </button>
+          {contactOpen && (
+            <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-bg-card border border-border rounded-lg shadow-card-hover overflow-hidden w-56 z-10">
+              <a
+                href="mailto:komail.kassimaly@efrei.net"
+                className="flex items-center gap-2 px-4 py-3 text-sm hover:bg-bg-secondary text-left"
+                onClick={() => setContactOpen(false)}
+              >
+                <FaEnvelope className="text-blue" /> {t('hero.ctaEmail')}
+              </a>
+              <a
+                href="https://www.linkedin.com/in/komail-kassimaly/"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 px-4 py-3 text-sm hover:bg-bg-secondary text-left border-t border-border"
+                onClick={() => setContactOpen(false)}
+              >
+                <FaLinkedin className="text-blue" /> {t('hero.ctaLinkedin')}
+              </a>
+            </div>
+          )}
+        </div>
       </motion.div>
     </section>
   )

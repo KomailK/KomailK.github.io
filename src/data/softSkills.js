@@ -34,9 +34,9 @@ export const softSkills = [
 ]
 
 export const languages = [
-  { name: { fr: "Anglais", en: "English" }, level: "C1", note: "TOEIC 965/990" },
-  { name: { fr: "Goudjrati", en: "Gujarati" }, level: "A2" },
-  { name: { fr: "Hindi/Ourdou", en: "Hindi/Urdu" }, level: "A2" },
-  { name: { fr: "Espagnol", en: "Spanish" }, level: "A1" },
-  { name: { fr: "Mandarin", en: "Mandarin" }, level: "A1" },
+  { name: { fr: "Goudjrati", en: "Gujarati" }, level: { fr: "Langue maternelle", en: "Native language" } },
+  { name: { fr: "Anglais", en: "English" }, level: { fr: "C1", en: "C1" }, note: "TOEIC 965/990" },
+  { name: { fr: "Hindi/Ourdou", en: "Hindi/Urdu" }, level: { fr: "A2", en: "A2" } },
+  { name: { fr: "Espagnol", en: "Spanish" }, level: { fr: "A1", en: "A1" } },
+  { name: { fr: "Mandarin", en: "Mandarin" }, level: { fr: "A1", en: "A1" } },
 ]

@@ -17,14 +17,14 @@ function Hero() {
   }, [roles.length])
 
   return (
-    <section className="flex flex-col items-center justify-center bg-bg-primary px-6 pt-44 pb-36 text-center">
+    <section className="relative flex flex-col items-center justify-center bg-bg-primary px-6 pt-28 pb-36 text-center overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-tag-bg border border-tag-border text-tag-text text-sm font-semibold mb-6"
+        className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-tag-bg border border-tag-border text-tag-text text-sm font-semibold mb-10 whitespace-pre-line leading-snug"
       >
-        <FaSearch />
+        <FaSearch className="shrink-0" />
         {t('hero.banner')}
       </motion.div>
 

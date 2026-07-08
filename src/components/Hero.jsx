@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { FaSearch, FaEnvelope, FaLinkedin } from 'react-icons/fa'
+import HeroFlowLine from './HeroFlowLine.jsx'
 
 function Hero() {
   const { t } = useTranslation()
@@ -18,14 +19,18 @@ function Hero() {
 
   return (
     <section className="relative flex flex-col items-center justify-center bg-bg-primary px-6 pt-28 pb-36 text-center overflow-hidden">
+      <HeroFlowLine />
+      <div className="relative z-10 flex flex-col items-center">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-tag-bg border border-tag-border text-tag-text text-sm font-semibold mb-10 whitespace-pre-line leading-snug"
+        className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-tag-bg border border-tag-border text-tag-text font-semibold mb-10"
       >
-        <FaSearch className="shrink-0" />
-        {t('hero.banner')}
+        <FaSearch className="shrink-0 text-lg" />
+        <span className="whitespace-pre-line leading-snug text-center text-sm md:text-base">
+          {t('hero.banner')}
+        </span>
       </motion.div>
 
       <motion.h1
@@ -99,6 +104,7 @@ function Hero() {
           )}
         </div>
       </motion.div>
+      </div>
     </section>
   )
 }

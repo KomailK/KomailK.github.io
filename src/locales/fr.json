@@ -23,7 +23,7 @@
     "title": "À propos",
     "bio": "Étudiant ingénieur en cybersécurité à Efrei Paris, je suis actuellement analyste SOC N1/N2 en alternance chez ITrust, où je traite plus de 200 alertes de sécurité par jour pour 6 à 7 clients. Je recherche un CDI ou un VIE en cybersécurité à partir de septembre 2026. Fort d'une expérience professionnelle à Londres et de 5 langues pratiquées en plus du français, je suis ouvert à des opportunités en France comme à l'international.",
     "availability": "Disponible septembre 2026",
-    "skills": ["SOC", "SIEM", "EDR", "Pentest", "Python", "Kali Linux", "Blue Team", "Red Team", "IAM", "Cloud Security"]
+    "skills": ["SOC", "SIEM", "EDR", "Blue Team"]
   },
   "experience": {
     "title": "Expériences Professionnelles"

@@ -11,7 +11,6 @@
     "banner": "Recherche CDI - VIE en cybersécurité\nÀ partir de septembre 2026",
     "roles": [
       "Analyste SOC N1/N2",
-      "Cybersecurity Enthusiast",
       "Blue Team | Red Team"
     ],
     "ctaProjects": "Voir mes projets",
@@ -34,7 +33,7 @@
     "close": "Fermer"
   },
   "certifications": {
-    "title": "Certifications",
+    "title": "Certifications & Réalisations",
     "status": {
       "obtained": "Obtenu",
       "in_progress": "En cours"

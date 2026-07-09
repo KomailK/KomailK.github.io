@@ -32,9 +32,11 @@ function About() {
         className="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-10 items-center"
       >
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <div className="w-48 h-48 rounded-full bg-bg-card border border-border flex items-center justify-center text-5xl font-bold text-navy font-mono mb-6">
-            KK
-          </div>
+          <img
+            src="/photo-komail.png"
+            alt="Komail Kassimaly"
+            className="w-48 h-48 rounded-full border border-border object-cover mb-6"
+          />
           <h3 className="text-2xl font-bold text-navy">Komail Kassimaly</h3>
           <p className="text-text-muted mb-4">Étudiant Ingénieur Cybersécurité | Analyste SOC</p>
           <div className="flex gap-4 mb-2">

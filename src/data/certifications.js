@@ -37,16 +37,4 @@ export const certifications = [
     date: { fr: "Avril 2024", en: "April 2024" },
     status: "obtained",
   },
-  {
-    name: "Cybersecurity Essentials",
-    org: "Cisco",
-    date: { fr: "Décembre 2023", en: "December 2023" },
-    status: "obtained",
-  },
-  {
-    name: "Introduction to Cybersecurity",
-    org: "Cisco",
-    date: { fr: "Novembre 2023", en: "November 2023" },
-    status: "obtained",
-  },
 ]

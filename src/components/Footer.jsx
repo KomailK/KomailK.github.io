@@ -1,9 +1,8 @@
 import { useTranslation } from 'react-i18next'
-import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import { FaLinkedin } from 'react-icons/fa'
 
 const SOCIALS = [
   { icon: FaLinkedin, href: 'https://www.linkedin.com/in/komail-kassimaly/', label: 'LinkedIn' },
-  { icon: FaGithub, href: 'https://github.com/KomailK', label: 'GitHub' },
 ]
 
 function Footer() {

@@ -33,16 +33,6 @@ function ProjectCard({ project, index, lang, t, onOpen }) {
         ))}
       </div>
       <div className="flex gap-3">
-        {project.github && (
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            className="px-4 py-2 rounded-lg border border-navy text-navy text-sm font-semibold hover:bg-bg-secondary transition-colors"
-          >
-            {t('projects.github')}
-          </a>
-        )}
         <button
           onClick={() => onOpen(project)}
           className="px-4 py-2 rounded-lg bg-blue text-white text-sm font-semibold hover:bg-blue-light transition-colors"

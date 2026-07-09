@@ -15,7 +15,6 @@ export const projects = [
       en: "As lead of a five-person team, I designed and deployed a secure network infrastructure: Pfsense firewall configuration, Windows file server setup, and Active Directory management for all network flows.",
     },
     tools: ["Pfsense", "Active Directory", "Windows Server", "Réseau"],
-    github: null,
     category: "infrastructure",
   },
   {
@@ -34,7 +33,6 @@ export const projects = [
       en: "I developed a Python tool that automates the reconnaissance phase of a security audit (Nmap, Legion) and generates a structured PDF report, cutting down manual reporting time.",
     },
     tools: ["Python", "Kali Linux", "Nmap", "Legion"],
-    github: null,
     category: "offensive",
   },
   {
@@ -53,7 +51,6 @@ export const projects = [
       en: "I developed a messaging application in Python using Sockets and the SSL/TLS protocol (OpenSSL), which ensures confidential client-server communication.",
     },
     tools: ["Python", "Socket", "SSL/TLS", "OpenSSL"],
-    github: null,
     category: "development",
   },
 ]

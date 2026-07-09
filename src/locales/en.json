@@ -21,7 +21,7 @@
   },
   "about": {
     "title": "About",
-    "bio": "Cybersecurity engineering student at Efrei Paris, currently working as a SOC Analyst N1/N2 at ITrust. Passionate about both offensive and defensive security, I am looking for my first full-time position or VIE starting September 2026.",
+    "bio": "Cybersecurity engineering student at Efrei Paris, I'm currently a SOC Analyst N1/N2 apprentice at ITrust, handling 200+ security alerts a day across 6 to 7 clients. I'm looking for a full-time position or VIE in cybersecurity starting September 2026. With professional experience in London and 5 languages spoken besides French, I'm open to opportunities in France and abroad.",
     "availability": "Available September 2026",
     "skills": ["SOC", "SIEM", "EDR", "Pentest", "Python", "Kali Linux", "Blue Team", "Red Team", "IAM", "Cloud Security"]
   },
@@ -31,7 +31,6 @@
   "projects": {
     "title": "Projects",
     "details": "Details",
-    "github": "GitHub",
     "close": "Close"
   },
   "certifications": {
